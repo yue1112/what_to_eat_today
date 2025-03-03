@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>今天吃什么？</title>
+    <style>
+        :root {
+            --primary-color: #8e44ad;
+            --primary-light: #9b59b6;
+            --primary-dark: #6c3483;
+            --secondary-color: #e8e8e8;
+            --text-color: #2c3e50;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f4fc;
+            color: var(--text-color);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2.8em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(142, 68, 173, 0.2);
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h1::before, h1::after {
+            content: none;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(142, 68, 173, 0.1);
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .input-row {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .input-group input {
+            width: 300px;
+            padding: 15px;
+            font-size: 1.3em;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .input-group label {
+            font-size: 1.4em;
+            color: var(--primary-color);
+            font-weight: bold;
+            min-width: 120px;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 8px rgba(142, 68, 173, 0.2);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 35px;
+        }
+
+        .btn {
+            width: 160px;
+            padding: 15px 25px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .generate-btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+        }
+
+        .export-btn {
+            background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(142, 68, 173, 0.3);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: var(--white);
+            box-shadow: 0 4px 15px rgba(142, 68, 173, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        th {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: var(--white);
+            padding: 15px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:nth-child(even) {
+            background-color: #faf7fd;
+        }
+
+        tr:hover {
+            background-color: #f3edfb;
+        }
+
+        tfoot tr {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        #menu-list {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>今天吃什么？</h1>
+    <div class="form-container">
+        <div class="input-group">
+            <div class="input-row">
+                <label for="total-amount">预算金额：</label>
+                <input type="number" id="total-amount" min="0" step="0.01" placeholder="请输入金额">
+            </div>
+            <div class="input-row">
+                <label for="invoice-date">采购日期：</label>
+                <input type="date" id="invoice-date">
+            </div>
+        </div>
+        <div class="button-group">
+            <button class="btn generate-btn" onclick="generateMenuItems()">生成菜单</button>
+            <button class="btn export-btn" onclick="exportToExcel()">导出到Excel</button>
+        </div>
+    </div>
+    <div id="menu-list"></div>
+
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
