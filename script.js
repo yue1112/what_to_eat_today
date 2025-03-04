@@ -400,11 +400,11 @@ function generateMenuItems() {
 
         let minQuantity, maxQuantity;
         if (category === 'vegetables') {
-            minQuantity = 20;  // 最小数量保持20
-            maxQuantity = 40;  // 最大数量改为40
+            minQuantity = 10;  // 最小数量保持20
+            maxQuantity = 15;  // 最大数量改为40
         } else if (category === 'meat') {
-            minQuantity = 15;
-            maxQuantity = 20;
+            minQuantity = 10;
+            maxQuantity = 15;
         } else if (category === 'fish') {
             minQuantity = 10;
             maxQuantity = 15;
