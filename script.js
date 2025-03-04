@@ -1,56 +1,56 @@
 // 菜品库
 const menuDatabase = {
     vegetables: [
-        { name: '土豆', unit: '斤', priceRange: [1.68, 1.73] },          // 合并新鲜土豆/新土豆
-        { name: '西红柿', unit: '斤', priceRange: [3.00, 5.40] },        // 合并普通和优质西红柿
+        { name: '土豆', unit: '斤', priceRange: [1.60, 1.73] },
+        { name: '西红柿', unit: '斤', priceRange: [2.80, 5.40] },
         { name: '花菜', unit: '斤', priceRange: [3.80, 3.91] },
-        { name: '包菜', unit: '斤', priceRange: [1.68, 2.10] },          // 合并普通和去皮包菜
-        { name: '生姜', unit: '斤', priceRange: [7.80, 9.60] },          // 合并生姜/新鲜姜/老姜
+        { name: '包菜', unit: '斤', priceRange: [1.68, 2.10] },
+        { name: '生姜', unit: '斤', priceRange: [3.57, 9.60] },
         { name: '小青菜', unit: '斤', priceRange: [2.16, 2.22] },
-        { name: '玉米', unit: '斤', priceRange: [3.36, 4.80] },          // 合并所有玉米
+        { name: '玉米', unit: '斤', priceRange: [3.36, 4.80] },
         { name: '豆角', unit: '斤', priceRange: [5.40, 5.56] },
         { name: '大白菜', unit: '斤', priceRange: [1.32, 1.36] },
-        { name: '蒜苔', unit: '斤', priceRange: [6.00, 7.00] },          // 合并普通和优质蒜苔
-        { name: '香葱', unit: '斤', priceRange: [6.00, 6.18] },
+        { name: '蒜苔', unit: '斤', priceRange: [6.00, 7.00] },
+        { name: '香葱', unit: '斤', priceRange: [5.00, 6.18] },
         { name: '生菜', unit: '斤', priceRange: [5.16, 5.31] },
-        { name: '黄瓜', unit: '斤', priceRange: [2.40, 9.60] },          // 合并所有黄瓜
+        { name: '黄瓜', unit: '斤', priceRange: [1.90, 9.60] },
         { name: '蒜米', unit: '斤', priceRange: [6.72, 6.92] },
         { name: '莴笋', unit: '斤', priceRange: [2.16, 2.22] },
-        { name: '茄子', unit: '斤', priceRange: [3.50, 4.20] },          // 合并所有茄子
+        { name: '茄子', unit: '斤', priceRange: [1.40, 4.20] },
         { name: '蒜苗', unit: '斤', priceRange: [5.40, 5.56] },
         { name: '毛豆仁', unit: '斤', priceRange: [12.60, 12.98] },
-        { name: '胡萝卜', unit: '斤', priceRange: [1.56, 2.16] },        // 合并新鲜和箱装
-        { name: '芋头', unit: '斤', priceRange: [3.84, 4.80] },          // 合并所有芋头
-        { name: '娃娃菜', unit: '包', priceRange: [9.60, 10.20] },       // 合并所有娃娃菜
+        { name: '胡萝卜', unit: '斤', priceRange: [1.56, 2.16] },
+        { name: '芋头', unit: '斤', priceRange: [3.84, 5.00] },
+        { name: '娃娃菜', unit: '包', priceRange: [3.50, 10.20] },
         { name: '韭黄', unit: '斤', priceRange: [7.20, 7.42] },
-        { name: '青椒', unit: '斤', priceRange: [2.40, 5.40] },          // 合并所有青椒
-        { name: '红椒', unit: '斤', priceRange: [6.00, 9.60] },          // 合并所有红椒
+        { name: '青椒', unit: '斤', priceRange: [2.40, 5.40] },
+        { name: '红椒', unit: '斤', priceRange: [6.00, 9.60] },
         { name: '金针菇', unit: '斤', priceRange: [3.00, 3.09] },
         { name: '海鲜菇', unit: '斤', priceRange: [4.80, 4.94] },
         { name: '上海青', unit: '斤', priceRange: [2.16, 2.22] },
-        { name: '洋葱', unit: '斤', priceRange: [2.16, 2.22] },
+        { name: '洋葱', unit: '斤', priceRange: [2.00, 2.80] },
         { name: '西兰花', unit: '斤', priceRange: [4.60, 4.74] },
         { name: '香菜', unit: '斤', priceRange: [15.60, 16.07] },
         { name: '杏鲍菇', unit: '斤', priceRange: [4.56, 4.70] },
-        { name: '菠菜', unit: '斤', priceRange: [4.20, 7.80] },          // 合并普通和精品菠菜
-        { name: '芹菜', unit: '斤', priceRange: [4.20, 6.18] },          // 合并所有芹菜
-        { name: '空心菜', unit: '斤', priceRange: [4.20, 4.33] },        // 合并普通和精品
+        { name: '菠菜', unit: '斤', priceRange: [4.20, 7.80] },
+        { name: '芹菜', unit: '斤', priceRange: [4.20, 6.18] },
+        { name: '空心菜', unit: '斤', priceRange: [4.20, 4.33] },
         { name: '油麦菜', unit: '斤', priceRange: [3.20, 3.30] },
         { name: '皇帝菜', unit: '斤', priceRange: [2.80, 4.80] },
         { name: '甜豆', unit: '斤', priceRange: [10.80, 11.12] },
-        { name: '山药', unit: '斤', priceRange: [7.20, 9.60] },          // 合并普通和铁棍山药
-        { name: '丝瓜', unit: '斤', priceRange: [3.90, 6.00] },          // 合并所有丝瓜
+        { name: '山药', unit: '斤', priceRange: [7.20, 9.60] },
+        { name: '丝瓜', unit: '斤', priceRange: [3.90, 8.50] },
         { name: '秋葵', unit: '斤', priceRange: [7.80, 8.03] },
-        { name: '香菇', unit: '斤', priceRange: [6.00, 9.60] },          // 合并所有香菇
+        { name: '香菇', unit: '斤', priceRange: [6.00, 9.60] },
         { name: '荷兰豆', unit: '斤', priceRange: [9.60, 9.89] },
         { name: '小白菜', unit: '斤', priceRange: [2.40, 2.47] },
-        { name: '冬瓜', unit: '斤', priceRange: [1.80, 1.85] },
-        { name: '海带', unit: '斤', priceRange: [3.84, 5.04] },          // 合并海带丝和结
-        { name: '豆芽', unit: '斤', priceRange: [1.68, 1.73] },          // 合并绿豆芽和黄豆芽
+        { name: '冬瓜', unit: '斤', priceRange: [0.90, 1.85] },
+        { name: '海带', unit: '斤', priceRange: [3.84, 5.04] },
+        { name: '豆芽', unit: '斤', priceRange: [1.68, 1.73] },
         { name: '平菇', unit: '斤', priceRange: [6.60, 6.80] },
         { name: '大葱', unit: '斤', priceRange: [3.00, 3.09] },
-        { name: '苦瓜', unit: '斤', priceRange: [7.20, 7.42] },
-        { name: '菜心', unit: '斤', priceRange: [3.60, 3.71] },
+        { name: '苦瓜', unit: '斤', priceRange: [2.50, 10.00] },
+        { name: '菜心', unit: '斤', priceRange: [2.30, 5.00] },
         { name: '茭白', unit: '斤', priceRange: [8.60, 8.86] },
         { name: '芦笋', unit: '斤', priceRange: [10.80, 11.12] },
         { name: '南瓜', unit: '斤', priceRange: [1.80, 1.85] },
@@ -59,53 +59,133 @@ const menuDatabase = {
         { name: '杭椒', unit: '斤', priceRange: [6.00, 6.18] },
         { name: '苋菜', unit: '斤', priceRange: [3.20, 3.30] },
         { name: '观音菜', unit: '斤', priceRange: [2.80, 2.88] },
-        { name: '木耳', unit: '斤', priceRange: [3.84, 3.96] },
+        { name: '木耳', unit: '斤', priceRange: [3.84, 5.00] },
         { name: '面筋', unit: '斤', priceRange: [4.80, 4.94] },
-        { name: '魔芋', unit: '斤', priceRange: [2.64, 2.72] }
+        { name: '魔芋', unit: '斤', priceRange: [2.64, 2.72] },
+        { name: '白萝卜', unit: '斤', priceRange: [0.68, 2.20] },
+        { name: '红薯', unit: '斤', priceRange: [1.50, 2.80] }
     ],
     meat: [
         { name: '猪瘦肉', unit: '斤', priceRange: [14.00, 14.42] },
         { name: '猪后腿肉', unit: '斤', priceRange: [12.00, 12.36] },
-        { name: '猪五花肉', unit: '斤', priceRange: [12.00, 15.00] },    // 合并普通和精品
-        { name: '猪排骨', unit: '斤', priceRange: [17.80, 18.33] },      // 合并所有排骨
+        { name: '猪五花肉', unit: '斤', priceRange: [12.00, 15.00] },
+        { name: '猪排骨', unit: '斤', priceRange: [17.80, 18.33] },
         { name: '猪前腿肉', unit: '斤', priceRange: [9.60, 9.89] },
         { name: '猪筒骨', unit: '斤', priceRange: [18.00, 18.54] },
-        { name: '猪里脊', unit: '斤', priceRange: [17.80, 18.33] },      // 合并所有里脊
-        { name: '猪蹄', unit: '斤', priceRange: [18.00, 18.54] },        // 合并猪蹄和猪脚
+        { name: '猪里脊', unit: '斤', priceRange: [17.80, 18.33] },
+        { name: '猪蹄', unit: '斤', priceRange: [18.00, 18.54] },
         { name: '猪梅花肉', unit: '斤', priceRange: [17.60, 18.13] },
         { name: '猪肘', unit: '斤', priceRange: [14.40, 14.83] },
         { name: '猪头肉', unit: '斤', priceRange: [9.00, 9.27] },
-        { name: '猪肚', unit: '斤', priceRange: [37.20, 44.50] },        // 合并普通和冰鲜
+        { name: '猪肚', unit: '斤', priceRange: [37.20, 44.50] },
         { name: '猪小肠', unit: '斤', priceRange: [18.00, 18.54] },
         { name: '猪肝', unit: '斤', priceRange: [15.60, 16.07] },
         { name: '猪腰', unit: '斤', priceRange: [33.00, 39.00] },
         { name: '猪心', unit: '斤', priceRange: [22.00, 28.00] },
-        { name: '猪血', unit: '斤', priceRange: [3.60, 3.71] }
+        { name: '猪血', unit: '斤', priceRange: [3.60, 3.71] },
+        { name: '鸡翅', unit: '斤', priceRange: [20.00, 25.00] },
+        { name: '翅中', unit: '斤', priceRange: [21.00, 24.80] },
+        { name: '翅根', unit: '包', priceRange: [13.00, 21.00] },
+        { name: '鸡胸肉10kg', unit: '件', priceRange: [123.00, 138.00] },
+        { name: '翅根10kg', unit: '件', priceRange: [125.00, 148.00] },
+        { name: '鸡爪', unit: '斤', priceRange: [20.00, 25.00] },
+        { name: '手枪腿', unit: '斤', priceRange: [15.00, 20.00] },
+        { name: '淀粉肠', unit: '包', priceRange: [20.00, 25.00] }
     ],
     fish: [
         { name: '秋刀鱼', unit: '斤', priceRange: [16.00, 16.48] },
         { name: '小鱿鱼', unit: '斤', priceRange: [22.50, 23.18] },
-        { name: '小黄鱼', unit: '斤', priceRange: [15.50, 15.97] },
-        { name: '马鲛鱼', unit: '斤', priceRange: [15.80, 16.27] },
-        { name: '鲳鱼', unit: '斤', priceRange: [16.50, 16.99] },
-        { name: '带鱼', unit: '斤', priceRange: [16.50, 16.99] },
+        { name: '小黄鱼', unit: '斤', priceRange: [15.50, 16.00] },
+        { name: '马鲛鱼', unit: '斤', priceRange: [15.80, 18.33] },
+        { name: '鲳鱼', unit: '斤', priceRange: [16.50, 25.00] },
+        { name: '带鱼', unit: '斤', priceRange: [15.00, 22.00] },
         { name: '草鱼', unit: '斤', priceRange: [9.80, 10.09] },
-        { name: '黄瓜鱼', unit: '斤', priceRange: [17.50, 18.03] }
+        { name: '黄瓜鱼', unit: '斤', priceRange: [17.50, 18.03] },
+        { name: '花蛤', unit: '斤', priceRange: [12.00, 13.00] },
+        { name: '比目鱼', unit: '斤', priceRange: [18.00, 20.00] },
+        { name: '鲫鱼', unit: '斤', priceRange: [18.00, 20.00] },
+        { name: '淡水鲈鱼', unit: '斤', priceRange: [12.50, 16.00] },
+        { name: '黄骨鱼', unit: '斤', priceRange: [12.00, 15.00] },
+        { name: '金线鱼', unit: '斤', priceRange: [20.00, 24.00] },
+        { name: '小波鱼', unit: '斤', priceRange: [14.00, 18.00] },
+        { name: '正方鱼', unit: '斤', priceRange: [16.00, 19.00] },
+        { name: '黑莲鱼头', unit: '斤', priceRange: [20.00, 25.00] },
+        { name: '黄脚海鲫鱼', unit: '斤', priceRange: [16.00, 22.00] },
+        { name: '鸟鱼', unit: '斤', priceRange: [12.00, 15.00] },
+        { name: '左口鱼', unit: '斤', priceRange: [22.00, 25.00] },
+        { name: '半边鱼', unit: '斤', priceRange: [14.00, 18.00] },
+        { name: '安康鱼', unit: '斤', priceRange: [12.00, 13.00] },
+        { name: '咸油带鱼', unit: '斤', priceRange: [26.00, 30.00] },
+        { name: '白鲳鱼', unit: '斤', priceRange: [20.00, 22.00] },
+        { name: '美国贝', unit: '斤', priceRange: [6.00, 9.00] },
+        { name: '鳗椎鱼', unit: '斤', priceRange: [22.00, 26.00] },
+        { name: '水发目鱼', unit: '斤', priceRange: [35.00, 38.00] },
+        { name: '黑莲鱼', unit: '斤', priceRange: [15.00, 16.00] },
+        { name: '乌鱼', unit: '斤', priceRange: [20.00, 25.00] },
+        { name: '鱿鱼须', unit: '斤', priceRange: [12.00, 15.00] },
+        { name: '斧头鱼', unit: '斤', priceRange: [13.00, 18.00] },
+        { name: '歪头鱼', unit: '斤', priceRange: [9.00, 11.00] },
+        { name: '咸黄瓜鱼干', unit: '斤', priceRange: [30.00, 34.00] },
+        { name: '小石斑', unit: '斤', priceRange: [14.00, 16.00] },
+        { name: '金鲳鱼', unit: '斤', priceRange: [12.00, 20.00] },
+        { name: '香鱼', unit: '斤', priceRange: [15.00, 21.00] },
+        { name: '白古鱼', unit: '斤', priceRange: [14.00, 18.00] },
+        { name: '提鱼', unit: '斤', priceRange: [10.00, 13.00] },
+        { name: '水淀鱼', unit: '斤', priceRange: [16.00, 18.00] },
+        { name: '鲢鱼尾', unit: '斤', priceRange: [6.00, 7.00] },
+        { name: '白鲢鱼头', unit: '斤', priceRange: [16.00, 18.00] },
+        { name: '大口鱼', unit: '斤', priceRange: [13.00, 18.00] },
+        { name: '黄梅鱼', unit: '斤', priceRange: [15.00, 20.00] },
+        { name: '马头鱼', unit: '斤', priceRange: [13.00, 19.00] },
+        { name: '老蛏', unit: '斤', priceRange: [22.00, 25.00] },
+        { name: '多宝鱼', unit: '斤', priceRange: [26.00, 28.00] }
     ],
     staple: [
         { name: '大米', unit: '袋', priceRange: [45.00, 51.00] },
         { name: '面粉', unit: '袋', priceRange: [32.00, 38.00] },
-        { name: '食用油', unit: '桶', priceRange: [42.00, 48.00] },
-        { name: '挂面', unit: '包', priceRange: [5.00, 11.00] }
+        { name: '食用油', unit: '桶', priceRange: [42.00, 158.00] },
+        { name: '生抽', unit: '瓶', priceRange: [15.00, 16.00] },
+        { name: '葵花籽油', unit: '件', priceRange: [340.00, 410.00] },
+        { name: '花生酱', unit: '瓶', priceRange: [21.00, 25.00] },
+        { name: '豉汁王', unit: '包', priceRange: [4.00, 6.00] },
+        { name: '蚝油', unit: '桶', priceRange: [45.00, 47.00] },
+        { name: '鸡精', unit: '包', priceRange: [16.00, 20.00] },
+        { name: '辣鲜露', unit: '件', priceRange: [15.00, 210.00] },
+        { name: '大豆油', unit: '桶', priceRange: [120.00, 124.00] },
+        { name: '老抽', unit: '瓶', priceRange: [10.00, 12.00] },
+        { name: '长糯米', unit: '包', priceRange: [5.00, 7.00] },
+        { name: '白砂糖', unit: '斤', priceRange: [5.00, 6.00] },
+        { name: '食用盐', unit: '包', priceRange: [1.40, 2.50] },
+        { name: '陈醋', unit: '件', priceRange: [45.00, 70.00] },
+        { name: '蒸鱼豉油', unit: '件', priceRange: [108.00, 240.00] },
+        { name: '味精', unit: '件', priceRange: [125.00, 149.00] },
+        { name: '米醋', unit: '瓶', priceRange: [6.00, 8.00] },
+        { name: '玫瑰腐乳', unit: '瓶', priceRange: [7.00, 9.90] },
+        { name: '排骨酱', unit: '瓶', priceRange: [18.00, 20.00] },
+        { name: '叉烧酱', unit: '瓶', priceRange: [17.00, 20.00] },
+        { name: '海鲜酱', unit: '瓶', priceRange: [15.00, 18.00] },
+        { name: '浓缩鸡汁', unit: '瓶', priceRange: [27.00, 32.00] },
+        { name: '橄榄油', unit: '桶', priceRange: [139.00, 158.00] },
+        { name: '虾露', unit: '桶', priceRange: [50.00, 60.00] },
+        { name: '红方豆腐乳', unit: '件', priceRange: [80.00, 100.00] },
+        { name: '冰糖', unit: '斤', priceRange: [5.00, 6.00] },
+        { name: '料酒', unit: '瓶', priceRange: [6.00, 8.50] }
     ],
     other: [
-        { name: '豆腐', unit: '斤', priceRange: [1, 3] },
-        { name: '香干', unit: '斤', priceRange: [4, 6] },
-        { name: '腐竹', unit: '斤', priceRange: [12, 16] },
-        { name: '香菇', unit: '斤', priceRange: [12, 16] },
-        { name: '平菇', unit: '包', priceRange: [4, 6] },
-        { name: '海带', unit: '斤', priceRange: [6, 8] },
-        { name: '粉条', unit: '斤', priceRange: [8, 12] }
+        { name: '肉松', unit: '包', priceRange: [15.00, 18.00] },
+        { name: '紫菜', unit: '包', priceRange: [15.00, 58.00] },
+        { name: '梅菜笋丝', unit: '包', priceRange: [1.00, 1.50] },
+        { name: '米粉', unit: '斤', priceRange: [5.00, 7.00] },
+        { name: '火腿肠', unit: '包', priceRange: [13.00, 17.00] },
+        { name: '榨菜', unit: '包', priceRange: [1.50, 2.00] },
+        { name: '酸菜', unit: '件', priceRange: [70.00, 75.00] },
+        { name: '阳春面', unit: '捆', priceRange: [2.40, 3.50] },
+        { name: '咸蛋', unit: '个', priceRange: [1.30, 2.00] },
+        { name: '腐竹', unit: '件', priceRange: [130.00, 170.00] },
+        { name: '白粿', unit: '斤', priceRange: [3.00, 3.00] },
+        { name: '长寿面', unit: '包', priceRange: [15.00, 20.00] },
+        { name: '扁面', unit: '斤', priceRange: [5.00, 8.00] },
+        { name: '黄豆', unit: '斤', priceRange: [4.50, 5.20] }
     ]
 };
 
@@ -242,10 +322,10 @@ function generateMenuItems() {
             minQuantity = 20;  // 最小数量保持20
             maxQuantity = 40;  // 最大数量改为40
         } else if (category === 'meat') {
-            minQuantity = 15;
-            maxQuantity = 20;
+            minQuantity = 12;
+            maxQuantity = 15;
         } else if (category === 'fish') {
-            minQuantity = 10;
+            minQuantity = 12;
             maxQuantity = 15;
         } else if (category === 'other') {
             minQuantity = 10;
@@ -610,35 +690,179 @@ window.onload = function() {
 function exportToExcel() {
     const menuItems = document.querySelectorAll('#menu-list tbody tr');
     const data = [
-        ['序号', '采购日期', '菜品名称', '单位', '数量', '单价(元)', '金额(元)']
+        ['采购清单'],  // 标题
+        ['序号', '采购日期', '菜品名称', '类别', '单位', '数量', '单价(元)', '金额(元)', '备注']  // 表头
     ];
 
+    let startRow = 3; // 数据开始行
+    let currentRow = startRow;
+
+    // 添加菜品数据
     menuItems.forEach(row => {
         const cells = row.querySelectorAll('td');
         const rowData = Array.from(cells).map(cell => cell.textContent);
-        data.push(rowData);
+        const itemName = rowData[2];
+        
+        // 在菜品名称后插入类别
+        let category = '';
+        if (menuDatabase.vegetables.some(item => item.name === itemName)) {
+            category = '蔬菜';
+        } else if (menuDatabase.meat.some(item => item.name === itemName)) {
+            category = '肉类';
+        } else if (menuDatabase.fish.some(item => item.name === itemName)) {
+            category = '海鲜';
+        } else if (menuDatabase.staple.some(item => item.name === itemName)) {
+            category = '调味品';
+        } else if (menuDatabase.other.some(item => item.name === itemName)) {
+            category = '干货';
+        }
+
+        // 重新组织数据，加入类别列
+        const newRowData = [
+            rowData[0], // 序号
+            rowData[1], // 日期
+            rowData[2], // 菜品名称
+            category,   // 类别
+            rowData[3], // 单位
+            rowData[4], // 数量
+            rowData[5], // 单价
+            { f: `F${currentRow}*G${currentRow}` }, // 金额 = 数量*单价
+            ''         // 备注
+        ];
+        
+        data.push(newRowData);
+        currentRow++;
     });
+
+    let lastDataRow = currentRow - 1;
+    
+    // 添加合计行
+    data.push([
+        '总计', 
+        '', 
+        '', 
+        '',
+        '', 
+        '', 
+        '', 
+        { f: `SUM(H${startRow}:H${lastDataRow})` },
+        ''
+    ]);
+    currentRow++;
+    let totalRow = currentRow - 1;
+
+    data.push(['签收人']);
+    currentRow++;
+    data.push([]);  // 空行
+    currentRow++;
+
+    // 使用类别列来计算各类别合计
+    let vegTotal = { f: `SUMIF(D${startRow}:D${lastDataRow}, "蔬菜", H${startRow}:H${lastDataRow})` };
+    let meatTotal = { f: `SUMIF(D${startRow}:D${lastDataRow}, "肉类", H${startRow}:H${lastDataRow})` };
+    let fishTotal = { f: `SUMIF(D${startRow}:D${lastDataRow}, "海鲜", H${startRow}:H${lastDataRow})` };
+    let stapleTotal = { f: `SUMIF(D${startRow}:D${lastDataRow}, "调味品", H${startRow}:H${lastDataRow})` };
+    let otherTotal = { f: `SUMIF(D${startRow}:D${lastDataRow}, "干货", H${startRow}:H${lastDataRow})` };
+
+    // 添加类别合计
+    data.push(['蔬菜类合计:', '', '', '', '', '', '', vegTotal]);
+    data.push(['肉类合计:', '', '', '', '', '', '', meatTotal]);
+    data.push(['水产海鲜:', '', '', '', '', '', '', fishTotal]);
+    data.push(['调味品类:', '', '', '', '', '', '', stapleTotal]);
+    data.push(['干货类合计:', '', '', '', '', '', '', otherTotal]);
 
     // 创建工作簿
     const wb = XLSX.utils.book_new();
     const ws = XLSX.utils.aoa_to_sheet(data);
 
-    // 添加计算公式
-    for (let i = 2; i <= data.length; i++) {
-        const cell = XLSX.utils.encode_cell({r: i-1, c: 6});  // 调整列索引
-        ws[cell] = { f: `E${i}*F${i}` };  // 数量 * 单价
-    }
+    // 设置单元格格式
+    ws['!cols'] = [
+        { wch: 8 },   // 序号
+        { wch: 12 },  // 采购日期
+        { wch: 15 },  // 菜品名称
+        { wch: 8 },   // 类别
+        { wch: 8 },   // 单位
+        { wch: 8 },   // 数量
+        { wch: 10 },  // 单价
+        { wch: 12 },  // 金额
+        { wch: 12 }   // 备注
+    ];
 
-    // 添加总计公式
-    const lastRow = data.length + 1;
-    const sumCell = XLSX.utils.encode_cell({r: lastRow-1, c: 6});  // 调整列索引
-    ws[sumCell] = { f: `SUM(G2:G${data.length})` };  // 调整列标识
-    ws[XLSX.utils.encode_cell({r: lastRow-1, c: 0})] = { v: '总计' };
+    // 合并标题单元格
+    ws['!merges'] = [
+        { s: { r: 0, c: 0 }, e: { r: 0, c: 8 } }  // 合并第一行的所有列
+    ];
 
-    // 设置列宽
-    const colWidths = [8, 12, 15, 8, 8, 10, 10];  // 添加日期列宽
-    ws['!cols'] = colWidths.map(w => ({wch: w}));
+    // 设置标题样式
+    ws['A1'] = { 
+        v: '采购清单',
+        s: {
+            font: { sz: 14, bold: true },
+            alignment: { horizontal: 'center', vertical: 'center' }
+        }
+    };
 
-    XLSX.utils.book_append_sheet(wb, ws, '菜单');
-    XLSX.writeFile(wb, '今天吃什么.xlsx');
-} 
+    XLSX.utils.book_append_sheet(wb, ws, '采购清单');
+    XLSX.writeFile(wb, '采购清单.xlsx');
+}
+
+// 检查重复菜品的函数
+function checkDuplicateItems() {
+    const categories = ['vegetables', 'meat', 'fish', 'staple', 'other'];
+    const duplicates = {};
+    
+    // 检查每个类别内的重复
+    categories.forEach(category => {
+        const items = menuDatabase[category];
+        const nameCount = {};
+        
+        items.forEach(item => {
+            if (!nameCount[item.name]) {
+                nameCount[item.name] = 1;
+            } else {
+                nameCount[item.name]++;
+                if (!duplicates[category]) {
+                    duplicates[category] = {};
+                }
+                duplicates[category][item.name] = nameCount[item.name];
+            }
+        });
+    });
+
+    // 检查跨类别的重复
+    const allItems = {};
+    categories.forEach(category => {
+        menuDatabase[category].forEach(item => {
+            if (!allItems[item.name]) {
+                allItems[item.name] = [category];
+            } else {
+                allItems[item.name].push(category);
+            }
+        });
+    });
+
+    const crossCategoryDuplicates = {};
+    Object.entries(allItems).forEach(([name, categories]) => {
+        if (categories.length > 1) {
+            crossCategoryDuplicates[name] = categories;
+        }
+    });
+
+    // 输出结果
+    console.log('=== 类别内重复项 ===');
+    Object.entries(duplicates).forEach(([category, items]) => {
+        console.log(`\n${category}类别中的重复项：`);
+        Object.entries(items).forEach(([name, count]) => {
+            console.log(`${name}: 出现${count}次`);
+        });
+    });
+
+    console.log('\n=== 跨类别重复项 ===');
+    Object.entries(crossCategoryDuplicates).forEach(([name, categories]) => {
+        console.log(`${name}: 出现在 ${categories.join(', ')} 类别中`);
+    });
+
+    return { duplicates, crossCategoryDuplicates };
+}
+
+// 在原有代码后面添加这个函数调用
+checkDuplicateItems(); 
