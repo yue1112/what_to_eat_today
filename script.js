@@ -252,33 +252,35 @@ function generateRandomQuantity(peopleCount, isMainDish) {
 function getRequiredCounts(totalAmount) {
     // 根据总金额确定每个类别需要的商品数量
     let counts = {
-        vegetables: 1, // 至少1个蔬菜
-        meat: 1,      // 至少1个肉类
-        fish: 1,      // 至少1个鱼类
-        other: 0,
-        staple: 0
+        vegetables: 0, // 蔬菜 50%
+        meat: 0,      // 肉类 25%
+        fish: 0,      // 鱼类 25%
+        other: 0,     // 干货（随机生成）
+        staple: 0     // 调料（随机生成）
     };
 
+    // 根据总金额计算基础数量
+    let baseCount;
     if (totalAmount <= 500) {
-        counts.other = 1;
+        baseCount = 10;
     } else if (totalAmount <= 1000) {
-        counts.vegetables = 2;
-        counts.meat = 2;
-        counts.fish = 2;
-        counts.other = 2;
+        baseCount = 15;
     } else if (totalAmount <= 2000) {
-        counts.vegetables = 3;
-        counts.meat = 3;
-        counts.fish = 2;
-        counts.other = 2;
-        counts.staple = 1;
+        baseCount = 18;
     } else {
-        counts.vegetables = 4;
-        counts.meat = 3;
-        counts.fish = 3;
-        counts.other = 3;
-        counts.staple = 2;
+        baseCount = 22;
     }
+
+    // 按照比例分配数量
+    counts.vegetables = Math.ceil(baseCount * 0.5);   // 50%
+    counts.meat = Math.ceil(baseCount * 0.25);        // 25%
+    counts.fish = Math.ceil(baseCount * 0.25);        // 25%
+    
+    // 干货随机生成 0-3 个
+    counts.other = Math.floor(Math.random() * 4);
+    
+    // 调料随机生成 0-2 个
+    counts.staple = Math.floor(Math.random() * 3);
 
     return counts;
 }
@@ -448,7 +450,7 @@ function generateMenuItems() {
     const hasFish = menuItems.some(item => menuDatabase.fish.some(f => f.name === item.name));
 
     if (!hasVegetables || !hasMeat || !hasFish) {
-        // 如果缺少必需类别，重新生成菜单
+        // 如果缺少必需类别（蔬菜、肉类、鱼类），重新生成菜单
         return generateMenuItems();
     }
 
