@@ -319,13 +319,13 @@ function generateMenuItems() {
         // 设置每个商品的数量范围
         let minQuantity, maxQuantity;
         if (category === 'vegetables') {
-            minQuantity = 20;  // 最小数量保持20
-            maxQuantity = 40;  // 最大数量改为40
+            minQuantity = 10;  // 最小数量保持20
+            maxQuantity = 15;  // 最大数量改为40
         } else if (category === 'meat') {
-            minQuantity = 12;
+            minQuantity = 10;
             maxQuantity = 15;
         } else if (category === 'fish') {
-            minQuantity = 12;
+            minQuantity = 10;
             maxQuantity = 15;
         } else if (category === 'other') {
             minQuantity = 10;
